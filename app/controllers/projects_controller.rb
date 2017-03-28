@@ -12,9 +12,16 @@ class ProjectsController < ApplicationController
     end
     
     def create
-        @project = Project.create
-        if @project.valid?
-            redirect_to project_path
-        end
+        @project = Project.create(project_params)
+        redirect_to projects_path
+    end
+    
+    private
+    
+    def project_params
+        params.require(:project).permit(:name, :picture, :description, :github, :app_link)
     end
 end
+
+
+
