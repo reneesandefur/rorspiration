@@ -1,0 +1,12 @@
+<div class = "boom-box col-10 offset-1">
+<% simple_form_for @project do |f| %>
+    <%= f.input :name %>
+    <%= f.input :picture %>
+    <%= f.input :github %>
+    <%= f.input :app_link %>
+    <%= f.input :description %>
+    <br />
+    <%= f.submit :Create %>
+    <br>
+<% end %>   
+</div>

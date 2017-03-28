@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rorspiration</title>
+    <title>RoRspiration</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,45 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-primary">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <%= link_to 'RoRspiration', root_path, class: 'navbar-brand' %>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Add Project<span class="sr-only">(current)</span></a>
+      </li>
+       <li>
+        <%= link_to 'Projects', projects_path, class: 'nav-link' %>
+      </li>
+      <li>
+        <%= link_to 'My Profile', '#', class: 'nav-link' %>
+      </li>
+      <li>
+        <%= link_to 'Sign Out', '#', class: 'nav-link' %>
+      </li>
+      <% else %>
+      <li>
+        <%= link_to 'Log In', '#', class: 'nav-link' %>
+      </li>
+      <li>
+        <%= link_to 'Sign Up', '#', class: 'nav-link' %>
+      </li>
+    </ul>
+  </div>
+</nav>
     <%= yield %>
   </body>
+  <br class= "clear" />
+   <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 footer-blurb">
+            Proudly hacked by <i>Renee Sandefur</i>
+          </div>
+        </div>
+      </div>
+    </div>  
 </html>
