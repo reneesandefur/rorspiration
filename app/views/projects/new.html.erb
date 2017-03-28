@@ -1,12 +1,14 @@
-<div class = "boom-box col-10 offset-1">
-<% simple_form_for @project do |f| %>
-    <%= f.input :name %>
-    <%= f.input :picture %>
-    <%= f.input :github %>
-    <%= f.input :app_link %>
-    <%= f.input :description %>
+
+<div class="boom-box col-10 offset-1">
+<h1>Share Your Project</h1>
+<%= simple_form_for @project do |f| %>
+    <%= f.input :name, label: 'App Name' %>
+    <%= f.input :picture, label: 'App Images' %>
+    <%= f.input :github, label: 'GitHub URL' %>
+    <%= f.input :app_link, label: 'App link'  %>
+    <%= f.input :description, label: 'Tell Us About Your App' %>
     <br />
-    <%= f.submit :Create %>
-    <br>
-<% end %>   
+    <%= f.submit 'Share', class:'btn btn-primary' %><br />
+    <br />
+<% end %>
 </div>
